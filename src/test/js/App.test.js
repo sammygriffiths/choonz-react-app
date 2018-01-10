@@ -1,10 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { shallow, mount, render } from 'enzyme';
 import App from '../../components/core/App';
+import SearchBar from '../../components/search-bar/SearchBar';
+import Results from '../../components/results/Results';
 
 describe('<App />', () => {
     it('renders without crashing', () => {
-        const div = document.createElement('div');
-        ReactDOM.render(<App />, div);
+        shallow(<App />);
+    });
+
+    it('renders a search bar', () => {
+        const wrapper = shallow(<App />);
+        expect(wrapper.contains(<SearchBar />)).toEqual(true)
+    });
+
+    it('renders a results container', () => {
+        const wrapper = shallow(<App />);
+        expect(wrapper.contains(<Results />)).toEqual(true);
     });
 });
