@@ -4,9 +4,10 @@
 
 .App-header {
   background-color: #149c82;
-  height: 150px;
-  padding: 20px;
+  /* height: 20vh; */
+  padding: 3vh;
   color: white;
+  position: relative;
 }
 
 .App-title {
@@ -15,4 +16,16 @@
 
 .App-intro {
   font-size: large;
+}
+
+.App-menu-link img {
+  height: 100%;
+}
+
+.App-menu-link {
+  position: absolute;
+  top: 40%;
+  bottom: 40%;
+  left: 2vw;
+  text-align: left;
 }
