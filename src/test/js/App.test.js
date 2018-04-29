@@ -4,16 +4,10 @@ import App from '../../components/core/App';
 import SearchBar from '../../components/search-bar/SearchBar';
 import Results from '../../components/results/Results';
 import Menu from '../../components/core/Menu';
-import menuIcon from '../../img/bars.svg'
 
 describe('<App />', () => {
     it('renders without crashing', () => {
         shallow(<App />);
-    });
-
-    it('renders a menu icon as a link', () => {
-        const wrapper = shallow(<App />);
-        expect(wrapper.find('a.App-menu-link img').length).toEqual(1);
     });
 
     it('renders a menu', () => {
