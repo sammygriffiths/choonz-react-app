@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
+import { push as ReactBurgerMenu } from 'react-burger-menu'
+import '../../css/Menu.css';
 
 class Menu extends Component {
     render() {
         return (
-            <nav className={this.props.classes}>
-                <h1>Menu</h1>
-            </nav>
+            <ReactBurgerMenu pageWrapId={"page-wrap"} outerContainerId={"outer-container"}>
+                <h2 className="bm-item-list">Menu</h2>
+            </ReactBurgerMenu>
         );
     }
 }
