@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SearchIcon from 'react-icons/lib/fa/search';
+import spotifyHelper from '../../helpers/spotify';
 import '../../css/SearchBar.css';
 
 class SearchBar extends Component {
@@ -23,7 +24,7 @@ class SearchBar extends Component {
         clearTimeout(this.state.submitTimer);
         typeof e !== 'undefined' && e.preventDefault();
         const term = this.state.search;
-        console.log(term);
+        spotifyHelper.search(term);
     }
 
     render() {
