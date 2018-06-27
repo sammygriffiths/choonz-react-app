@@ -4,8 +4,8 @@ import spotifyHelper from '../../helpers/spotify';
 import '../../css/SearchBar.css';
 
 class SearchBar extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             search: '',
             submitTimer: null
@@ -14,17 +14,18 @@ class SearchBar extends Component {
 
     onChange = (e) => {
         clearTimeout(this.state.submitTimer);
-        const state = this.state
+        let state = this.state
         state[e.target.name] = e.target.value;
         state['submitTimer'] = setTimeout(this.onSubmit, 1000);
         this.setState(state);
     }
 
-    onSubmit = (e) => {
+    onSubmit = async (e) => {
         clearTimeout(this.state.submitTimer);
         typeof e !== 'undefined' && e.preventDefault();
         const term = this.state.search;
-        spotifyHelper.search(term);
+        let results = await spotifyHelper.search(term);
+        this.props.searchCallback(results);
     }
 
     render() {

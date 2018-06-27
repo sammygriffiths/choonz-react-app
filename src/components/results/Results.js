@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 
 class Results extends Component {
     render() {
-        return (
-            <h1>Results</h1>
-        );
+        console.log(this.props.value);
+        return null;
     }
 }
 

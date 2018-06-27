@@ -5,6 +5,20 @@ import Menu from './Menu'
 import '../../css/App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      searchResults: {}
+    }
+    this.updateSearchResults = this.updateSearchResults.bind(this);
+  }
+
+  updateSearchResults(results) {
+    let state = this.state;
+    state['searchResults'] = results;
+    this.setState(state);
+  }
+
   showSettings(event) {
     event.preventDefault();
   }
@@ -15,10 +29,10 @@ class App extends Component {
         <Menu />
         <div id="page-wrap">
           <header className="App-header">
-            <SearchBar />
+            <SearchBar searchCallback={this.updateSearchResults} />
           </header>
           <main className="App-main">
-            <Results />
+            <Results value={this.state.searchResults} />
           </main>
         </div>
       </div>

@@ -3,10 +3,13 @@ import axios from 'axios';
 let spotify = {};
 
 spotify.search = (term) => {
-    axios.get('https://api.spotify.com/v1/search?q=' + term +'&type=album')
-        .then((res) => {
-            console.log(res);
-        })
+    return new Promise((resolve, reject) => {
+        axios.get(process.env.REACT_APP_SEARCH_URL + '/search?term=' + term)
+            .then((res) => {
+                resolve(res.data.body);
+            })
+            .catch(reject)
+    });
 };
 
 export default spotify;
