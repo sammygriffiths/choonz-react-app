@@ -4,6 +4,7 @@
 
 .App {
   text-align: center;
+  overflow: hidden;
 }
 
 .App-header {
@@ -22,10 +23,6 @@
   font-size: large;
 }
 
-.App-menu-link img {
-  height: 100%;
-}
-
 .App-menu-link {
   position: absolute;
   top: 40%;
@@ -36,4 +33,8 @@
 
 .App-menu.show {
   left: 0;
+}
+
+img {
+  max-width: 100%;
 }

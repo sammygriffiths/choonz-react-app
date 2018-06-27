@@ -8,7 +8,8 @@
     "react-burger-menu": "^2.4.4",
     "react-dom": "^16.3.2",
     "react-icons": "^2.2.7",
-    "react-scripts": "1.0.17"
+    "react-scripts": "^1.1.4",
+    "react-tabs-redux": "^3.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
