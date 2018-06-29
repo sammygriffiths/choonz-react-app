@@ -12,4 +12,24 @@ sonos.add = (spotifyId) => {
     });
 };
 
+sonos.resetRecentlyAdded = () => {
+    return new Promise((resolve, reject) => {
+        axios.delete(process.env.REACT_APP_QUEUE_URL + '/songs/recently-added')
+            .then((res) => {
+                resolve(res.data);
+            })
+            .catch(reject)
+    });
+};
+
+sonos.clearQueue = () => {
+    return new Promise((resolve, reject) => {
+        axios.delete(process.env.REACT_APP_QUEUE_URL + '/songs')
+            .then((res) => {
+                resolve(res.data);
+            })
+            .catch(reject)
+    });
+};
+
 export default sonos;

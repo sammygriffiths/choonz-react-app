@@ -9,7 +9,7 @@ class Track extends Component {
 
     addToSonos(e) {
         e.preventDefault();
-        sonosHelper.add(this.state.id).then(console.log);
+        sonosHelper.add(this.state.id).then(console.log).catch(console.error);
     }
 
     render() {
