@@ -1,5 +1,5 @@
 .tab-link {
-    width: 33.33%;
+    width: 50%;
     float: left;
     padding: 20px;
     border-left: 1px solid #149c82;
@@ -95,3 +95,35 @@ li.track a:hover svg {
     color: #2155A1;
 }
 
+ul.artist-list {
+    list-style: none;
+    padding: 10px;
+    width: 100%;
+}
+
+li.artist {
+    background: #eee;
+    margin-bottom: 20px;
+    width: 300px;
+    display: inline-block;
+}
+
+li.artist a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-decoration: none;
+}
+
+li.artist h2 {
+    color: #149c82;
+    border-top: 2px solid #cdd9e4;
+    padding-top: 30px;
+}
+
+li.artist img {
+    border-radius: 100%;
+    object-fit: cover;
+    width: 160px;
+    height: 160px;
+}

@@ -7,9 +7,14 @@ class Artist extends Component {
     }
 
     render() {
+        let image = (this.state.images.length >= 2) ? <img src={this.state.images[1].url} /> : '' ;
+
         return (
             <li className="artist">
-                <p>{this.state.name}</p>
+                <a href={"/artist/" + this.state.id}>
+                    {image}
+                    <h2>{this.state.name}</h2>
+                </a>
             </li>
         );
     }

@@ -12,12 +12,12 @@ class Results extends Component {
                 <header className="tab-links">
                     <TabLink to="tracks">Tracks</TabLink>
                     <TabLink to="artists">Artists</TabLink>
-                    <TabLink to="albums">Albums</TabLink>
+                    {/* <TabLink to="albums">Albums</TabLink> */}
                 </header>
 
                 <TabContent for="tracks"><TrackList tracks={this.props.value.tracks} /></TabContent>
                 <TabContent for="artists"><ArtistList artists={this.props.value.artists} /></TabContent>
-                <TabContent for="albums">{JSON.stringify(this.props.value.albums.items)}</TabContent>
+                {/* <TabContent for="albums">{JSON.stringify(this.props.value.albums.items)}</TabContent> */}
             </Tabs>
         );
     }
