@@ -14,12 +14,6 @@ class TrackList extends Component {
 
         const List = VirtualList()(MyList);
 
-        // let tracks = [];
-        // this.props.tracks.items.forEach(track => {
-        //     tracks.push(<Track key={track.id} content={track} />);
-        // });
-        
-        // return <ul className="track-list">{tracks}</ul>;
         return <List
             items={this.props.tracks.items}
             itemHeight={100}

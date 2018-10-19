@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Tabs, TabLink, TabContent } from 'react-tabs-redux';
 import '../../css/Results.css';
 import TrackList from './TrackList';
+import ArtistList from './ArtistList';
 
 class Results extends Component {
     render() {
@@ -15,7 +16,7 @@ class Results extends Component {
                 </header>
 
                 <TabContent for="tracks"><TrackList tracks={this.props.value.tracks} /></TabContent>
-                <TabContent for="artists">{JSON.stringify(this.props.value.artists.items)}</TabContent>
+                <TabContent for="artists"><ArtistList artists={this.props.value.artists} /></TabContent>
                 <TabContent for="albums">{JSON.stringify(this.props.value.albums.items)}</TabContent>
             </Tabs>
         );
