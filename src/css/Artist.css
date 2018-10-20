@@ -26,9 +26,3 @@
 .ReactModal__Content > div {
     height: 100%;
 }
-
-.ReactModal__Content > div svg {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-}
