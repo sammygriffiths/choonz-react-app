@@ -35,13 +35,17 @@ class Artist extends Component {
 
     async getModalContent() {
         let fullArtistData = await spotify.getArtist(this.state.artistData.id);
+        let albums = fullArtistData.albums.body.items.map(album => {
+            return <TrackList virtual={false} tracks={album.tracks.body.items} showImage={false} title={album.name} />
+        });
         return (
             <div>
                 <a onClick={this.closeModal} className="modal-close"><FontAwesomeIcon icon={faTimes} /></a>
                 <h1>{this.state.artistData.name}</h1>
                 { this.state.image }
                 <div className="divider"></div>
-                <TrackList virtual={false} tracks={fullArtistData.topTracks.body.tracks} showImage={false} />
+                <TrackList virtual={false} tracks={fullArtistData.topTracks.body.tracks} showImage={false} title="Top Tracks" />
+                {albums}
             </div>
         );
     }

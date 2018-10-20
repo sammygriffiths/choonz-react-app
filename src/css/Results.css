@@ -57,6 +57,11 @@ ul.track-list {
     border: 2px solid #dce4ec;
 }
 
+ul.track-list li.title {
+    color: #149c82;
+    font-size: 20px;
+}
+
 li.track {
     padding: 10px 55px 10px 80px;
     position: relative;
