@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import spotify from '../../helpers/spotify';
 import TrackList from './TrackList';
+import Loader from 'react-loader-spinner'
 
 class Artist extends Component {
     constructor(props) {
@@ -13,19 +14,21 @@ class Artist extends Component {
             artistData: props.content,
             modalIsOpen: false,
             modalContent: '',
-            renderModal: false
+            fullDataLoaded: false
         };
 
         this.openModal = this.openModal.bind(this);
         this.closeModal = this.closeModal.bind(this);
         this.getModalContent = this.getModalContent.bind(this);
-        this.container = React.createRef();
     }
 
     async openModal(e) {
         e.preventDefault();
         this.setState({ modalIsOpen: true });
-        this.setState({ modalContent: await this.getModalContent() });
+        if (!this.state.fullDataLoaded) {
+            this.setState({ modalContent: <Loader type="Oval" color="#149c82" height="100" width="100"/>  } );
+            this.setState({ modalContent: await this.getModalContent() });
+        }
     }
 
     closeModal(e) {
@@ -35,6 +38,7 @@ class Artist extends Component {
 
     async getModalContent() {
         let fullArtistData = await spotify.getArtist(this.state.artistData.id);
+        this.setState({ fullDataLoaded: true });
         let albums = fullArtistData.albums.body.items.map(album => {
             return <TrackList virtual={false} tracks={album.tracks.body.items} showImage={false} title={album.name} />
         });
