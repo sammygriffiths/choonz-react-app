@@ -9,7 +9,7 @@ class TrackList extends Component {
             const MyList = ({virtual, itemHeight}) => (
                 <ul style={virtual.style} className="track-list">
                     {virtual.items.map(track => (
-                        <Track key={track.id} content={track} height={itemHeight} />
+                        <Track key={track.id} content={track} height={itemHeight} showImage={this.props.showImage} />
                     ))}
                 </ul>
             );
@@ -21,7 +21,7 @@ class TrackList extends Component {
             />
         } else {
             let tracks = this.props.tracks.map(artist => {
-                return <Track key={artist.id} content={artist} height={itemHeight} />;
+                return <Track key={artist.id} content={artist} height={itemHeight} showImage={this.props.showImage} />;
             });
 
             return <ul className="track-list">{tracks}</ul>;

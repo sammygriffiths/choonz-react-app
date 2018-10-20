@@ -41,7 +41,7 @@ class Artist extends Component {
                 <h1>{this.state.artistData.name}</h1>
                 { this.state.image }
                 <div className="divider"></div>
-                <TrackList virtual={false} tracks={fullArtistData.topTracks.body.tracks} />
+                <TrackList virtual={false} tracks={fullArtistData.topTracks.body.tracks} showImage={false} />
             </div>
         );
     }
