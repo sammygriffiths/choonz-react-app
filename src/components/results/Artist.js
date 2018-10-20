@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import spotify from '../../helpers/spotify';
 import TrackList from './TrackList';
-import Loader from 'react-loader-spinner'
+import Loader from 'react-loader-spinner';
 
 class Artist extends Component {
     constructor(props) {
@@ -26,7 +26,7 @@ class Artist extends Component {
         e.preventDefault();
         this.setState({ modalIsOpen: true });
         if (!this.state.fullDataLoaded) {
-            this.setState({ modalContent: <Loader type="Oval" color="#149c82" height="100" width="100"/>  } );
+            this.setState({ modalContent: <Loader type="ThreeDots" color="#149c82" height="100" width="100"/>  } );
             this.setState({ modalContent: await this.getModalContent() });
         }
     }

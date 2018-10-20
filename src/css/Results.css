@@ -92,11 +92,14 @@ li.track a {
 }
 
 li.track svg {
-    fill: #149c82;
     font-size: 40px;
 }
 
-li.track a:hover svg {
+li.track svg path {
+    fill: #149c82;
+}
+
+li.track a:hover svg path {
     color: #2155A1;
 }
 
