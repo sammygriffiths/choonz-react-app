@@ -105,6 +105,7 @@ li.artist {
     background: #eee;
     margin-bottom: 20px;
     width: 300px;
+    max-width: 100%;
     display: inline-block;
 }
 

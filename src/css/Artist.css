@@ -1,0 +1,23 @@
+.ReactModal__Overlay {
+    text-align: center;
+}
+
+.ReactModal__Overlay .modal-close {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.ReactModal__Content > div > img {
+    border-radius: 100%;
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+}
+
+.ReactModal__Overlay .divider {
+    width: 100%;
+    height: 2px;
+    background: #cdd9e4;
+    margin-top: 30px;
+}

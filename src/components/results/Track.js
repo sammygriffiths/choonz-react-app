@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import sonosHelper from '../../helpers/sonos';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlusSquare } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlusSquare } from '@fortawesome/free-solid-svg-icons';
 
 class Track extends Component {
     constructor(props) {
