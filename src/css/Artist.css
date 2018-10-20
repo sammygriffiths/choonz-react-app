@@ -1,5 +1,6 @@
 .ReactModal__Overlay {
     text-align: center;
+    z-index: 200;
 }
 
 .ReactModal__Overlay .modal-close {

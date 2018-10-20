@@ -12,6 +12,8 @@
 	display: inline-block;
     width: 100%;
     font-size: 1.5em;
+    z-index: 7;
+    position: relative;
 }
 
 .App-search input[type="text"]:focus {
@@ -27,6 +29,7 @@
     top: 17px;
     color: #C9CED3;
     font-size: 1.5em;
+    z-index: 7;
 }
 
 .App-search input[type="text"]:focus + .App-search-icon {

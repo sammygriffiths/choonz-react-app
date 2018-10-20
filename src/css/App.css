@@ -12,11 +12,23 @@
 }
 
 .App-header {
-  background-color: #149c82;
+  /* background-color: #149c82; */
   padding: 3vh;
   color: white;
   position: relative;
   text-align: left;
+}
+
+.App-header:before {
+    content: '';
+    display: block;
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: #149c82;
 }
 
 .App-title {
