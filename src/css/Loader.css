@@ -1,0 +1,37 @@
+.loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(33, 33, 33, 0.75);
+    z-index: 100;
+    text-align: center;
+}
+
+.loader div {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.loader.failed svg, .loader.success svg {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    font-size: 60vw;
+}
+
+.loader.failed svg path {
+    fill: #F34860;
+}
+
+.loader.success svg path {
+    fill: #149c82;
+}
+
+.App-search .loader {
+    background: #FFFFFF;
+    z-index: 4;
+}

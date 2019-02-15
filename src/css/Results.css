@@ -1,0 +1,138 @@
+.tab-link {
+    width: 50%;
+    float: left;
+    padding: 20px;
+    border-left: 1px solid #149c82;
+    border-bottom: 0;
+    color: #000;
+    position: relative;
+}
+
+.tab-link:first-child {
+    border: 0;
+}
+
+.tab-link.tab-link-active {
+    background: transparent;
+    color: #149c82;
+}
+
+.tab-link.tab-link-active:before {
+    content: '';
+    display: block;
+    width: 100vw;
+    height: 1px;
+    position: absolute;
+    right: 100%;
+    top: 100%;
+    background: #149c82;
+}
+
+.tab-link.tab-link-active:after {
+    content: '';
+    display: block;
+    width: 100vw;
+    height: 1px;
+    position: absolute;
+    left: 100%;
+    top: 100%;
+    background: #149c82;
+}
+
+.tab-links:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.tab-content {
+    padding: 20px;
+}
+
+ul.track-list {
+    list-style: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 6px;
+    border: 2px solid #dce4ec;
+}
+
+ul.track-list li.title {
+    color: #149c82;
+    font-size: 20px;
+}
+
+li.track {
+    padding: 10px 55px 10px 80px;
+    position: relative;
+    text-align: left;
+    border-bottom: 1px solid #dce4ec;
+}
+
+li.track img {
+    position: absolute;
+    left: 10px;
+    top: 20px;
+    max-height: calc(100% - 40px);
+}
+
+li.track p {
+    margin: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+}
+
+li.track a {
+    position: absolute;
+    right: 10px;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+li.track svg {
+    font-size: 40px;
+}
+
+li.track svg path {
+    fill: #149c82;
+}
+
+li.track a:hover svg path {
+    color: #2155A1;
+}
+
+ul.artist-list {
+    list-style: none;
+    padding: 10px;
+    width: 100%;
+}
+
+li.artist {
+    background: #eee;
+    margin-bottom: 20px;
+    width: 300px;
+    max-width: 100%;
+    display: inline-block;
+}
+
+li.artist a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-decoration: none;
+}
+
+li.artist h2 {
+    color: #149c82;
+    border-top: 2px solid #cdd9e4;
+    padding-top: 30px;
+}
+
+li.artist img {
+    border-radius: 100%;
+    object-fit: cover;
+    width: 160px;
+    height: 160px;
+}
